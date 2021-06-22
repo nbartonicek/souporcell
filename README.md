@@ -27,7 +27,7 @@ Requirements:
 | ----------- | --- | ------ | ---------- | -- | -- | -- |
 | neomet_01  | Neomet_Pool1 | /share/ScratchGeneral/niaden/NeoMet_Nov2020/Pool1 | HAR8323_UKB_2020_RESULTS | 4583 | 4613 | 4622 |
 
-Please keep the headers as in the table below, with sample columns as S1..Sn where n is the number of samples
+Please keep the headers as in the table above, with sample columns as S1..Sn where n is the number of samples
 
 ## 4. Starter scripts:
 #### 1.start_pipeline.py that reads the csv file with runs and starts for each:
