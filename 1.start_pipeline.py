@@ -1,12 +1,12 @@
 import pandas as pd 
 import numpy as np 
-
 import os
 
-#this is a modification of the previous script that recognises the number of 
-#samples and 
-#import information about the project ID, samples, array 
-df = pd.read_csv("neomet_02.csv") 
+#this script imports information about the project name, run ID, directory of the bam file
+#location of the axiom genotyping array as well as sample IDs 
+# and starts souporcell analysis
+
+df = pd.read_csv("sample_information.csv") 
 
 for index,row in df.iterrows():
 	projectname=row['projectname']
