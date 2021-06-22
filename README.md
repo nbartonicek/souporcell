@@ -1,1 +1,34 @@
-# souporcell
+# Souporcell and Axiom arrays demux
+
+This site contains scripts for demultiplexing single-cell data with Souporcell, using genotyping information from Axiom arrays. 
+
+Requirements:
+## 1. Souporcell (requires Singularity > v.3.0)
+
+`singularity pull shub://wheaton5/souporcell`
+
+## 2. Tools for analysis of Axiom data (also available as modules on the Garvan cluster)
+
+#### -gcc >v.4.8.2
+#### -picard-tools >v1.138
+#### -plink/prebuilt >v1.07
+#### -plink/prebuilt >v1.90beta_3g
+#### -vcftools >v0.1.16
+#### -bedtools >v2.22.0
+
+## 3. Samplesheet in csv format with information on: 
+#### i Project name
+#### ii Run
+#### iii Location of Cellranger Bam file (possorted.bam)
+#### iv Location of Axiom array data
+#### v Sample IDs (as many as you have per run, below is an example for 3)
+
+| projectname | run | runDir | annotation | S1 | S2 | S3 |
+| ----------- | --- | ------ | ---------- | -- | -- | -- |
+| neomet_01  | Neomet_Pool1 | /share/ScratchGeneral/niaden/NeoMet_Nov2020/Pool1 | HAR8323_UKB_2020_RESULTS | 4583 | 4613 | 4622 |
+
+## 4. Starter scripts:
+#### 1.start_pipeline.py that reads the csv file with runs and starts for each:
+#### 2.genotype_souporcell_annotate.sh that for each run starts jobs for genotyping analysis, souporcell demux, and annotation of demuxed samples based on genotype
+#### 3.souporcell.sh that sets parameters for souporcell analysis (memory, directory structure)
+#### 4.annotate.py that annotates the souporcell results in clusters.tsv into clusters_annotated.tsv, based on information in cluster_genotypes.vcf and sample information in the file ending with b38.vcf from the genotyping analysis.
