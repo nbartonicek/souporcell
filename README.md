@@ -11,9 +11,9 @@ Requirements:
 - Thermofisher tool for analysis of axiom data
 - available from dropbox, update from ThermoFisher web site (difficult to find, must have an account)
 
-`wget https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%20Cell%20Projects/demultiplexing/APT_2.10.2.2_Linux_64_bitx86_binaries.zip
-unzip APT_2.10.2.2_Linux_64_bitx86_binaries.zip
-cp apt-2.10.2.2-x86_64-intel-linux/bin/* ~/local/bin`
+#`wget https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%20Cell%20Projects/demultiplexing/APT_2.10.2.2_Linux_64_bitx86_binaries.zip`
+#`unzip APT_2.10.2.2_Linux_64_bitx86_binaries.zip`
+#`cp apt-2.10.2.2-x86_64-intel-linux/bin/* ~/local/bin`
 
 
 
