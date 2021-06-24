@@ -83,3 +83,13 @@ Please keep the headers as in the table above, with sample columns as S1..Sn whe
 #### 2.genotype_souporcell_annotate.sh that for each run starts jobs for genotyping analysis, souporcell demux, and annotation of demuxed samples based on genotype
 #### 3.souporcell.sh that sets parameters for souporcell analysis (memory, directory structure)
 #### 4.annotate.py that annotates the souporcell results in clusters.tsv into clusters_annotated.tsv, based on information in cluster_genotypes.vcf and sample information in the file ending with b38.vcf from the genotyping analysis.
+
+
+## Troubleshooting
+
+1. If encountering weird names of samples in the end, check the regexp in the 4.annotate.py which operates by:
+ids_trimmed = [re.sub(r'.CEL', '', id) for id in GPb1_donor_ids]
+ids_trimmed = [re.sub(r'_Blood.*', '', id) for id in ids_trimmed]
+ids_trimmed = [re.sub(r'_Tumou.*', '', id) for id in ids_trimmed]
+ids_trimmed = [re.sub(r'_\d$', '', id) for id in ids_trimmed]
+ids_trimmed = [re.sub(r'.*_', '', id) for id in ids_trimmed]
