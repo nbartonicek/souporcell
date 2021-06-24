@@ -20,8 +20,20 @@ Requirements:
 
 ## 3. appropriate Axiom annotation files
 
+Currently two available:
+-UKB_WCSG and PMDA.r7, available to download from Thermofisher pages
+-alternatively, download the annotation.tar.gz with all required files from dropbox into your project directory, genotyping folder
 
+`cd genotyping`
 
+`wget https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%20Cell%20Projects/demultiplexing/annotation.tar.gz`
+
+`tar -xvf annotation.tar.gz`
+
+## 4. raw genotyping data
+
+-collection of CEL files and annotations, requires CEL files with sample names in them, table_rpt.txt
+-place into your project directory under raw_data/genotype/"annotation" where "annotation" is the 4th column in your samplesheet
 
 ## 4. Tools for analysis of Axiom data 
 -available as modules on the Garvan cluster, no need to install
@@ -33,15 +45,15 @@ Requirements:
 #### -vcftools >v0.1.16
 #### -bedtools >v2.22.0
 
-## 5. appropriate Axiom annotation files
+## 4. Samplesheet in csv format with information on: 
+#### i project_name 
+-preferably something related to biology or person)
+#### ii run
+#### iii runDir: location of directory with all the runs from sequencing
+-must contain downstream Cellranger Bam file (possorted.bam) and folder with filtered_feature_bc_matrix/barcodes.tsv.gz in the following manner
+-runDir/run/run/outs/count/possorted_genome_bam.bam
+-runDir/run/run/outs/count/filtered_feature_bc_matrix/barcodes.tsv.gz
 
-
-
-
-## 3. Samplesheet in csv format with information on: 
-#### i Project name
-#### ii Run
-#### iii Location of Cellranger Bam file (possorted.bam)
 #### iv Location of Axiom array data
 #### v Sample IDs (as many as you have per run, below is an example for 3)
 
