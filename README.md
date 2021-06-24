@@ -7,9 +7,10 @@ Requirements:
 
 `singularity pull shub://wheaton5/souporcell`
 
-## 2. apt-genotype-axiom
-- Thermofisher tool for analysis of axiom data
-- available from dropbox, update from ThermoFisher web site (difficult to find, must have an account)
+## 2. Affymetrix Analysis Power Tools (APT)
+- Thermofisher/Affymetrix tool suite for analysis of axiom data
+- available from dropbox
+- update from ThermoFisher web site (difficult to find, must have an account)
 
 `wget https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%20Cell%20Projects/demultiplexing/APT_2.10.2.2_Linux_64_bitx86_binaries.zip`
 
@@ -17,9 +18,13 @@ Requirements:
 
 `cp apt-2.10.2.2-x86_64-intel-linux/bin/* ~/local/bin`
 
+## 3. appropriate Axiom annotation files
 
 
-## 2. Tools for analysis of Axiom data (also available as modules on the Garvan cluster)
+
+
+## 4. Tools for analysis of Axiom data 
+-available as modules on the Garvan cluster, no need to install
 
 #### -gcc >v.4.8.2
 #### -picard-tools >v1.138
@@ -27,6 +32,11 @@ Requirements:
 #### -plink/prebuilt >v1.90beta_3g
 #### -vcftools >v0.1.16
 #### -bedtools >v2.22.0
+
+## 5. appropriate Axiom annotation files
+
+
+
 
 ## 3. Samplesheet in csv format with information on: 
 #### i Project name
