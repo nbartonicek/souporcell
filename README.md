@@ -30,12 +30,12 @@ Currently two available:
 
 `tar -xvf annotation.tar.gz`
 
-## 4. raw genotyping data
+## 4. raw Axiom genotyping data
 
 -collection of CEL files and annotations, requires CEL files with sample names in them, table_rpt.txt
 -place into your project directory under raw_data/genotype/"annotation" where "annotation" is the 4th column in your samplesheet
 
-## 4. Tools for analysis of Axiom data 
+## 5. Tools for analysis of Axiom data 
 -available as modules on the Garvan cluster, no need to install
 
 #### -gcc >v.4.8.2
@@ -45,13 +45,15 @@ Currently two available:
 #### -vcftools >v0.1.16
 #### -bedtools >v2.22.0
 
-## 4. Samplesheet in csv format with information on: 
+## 6. Samplesheet in csv format with information on: 
 #### i project_name 
 -preferably something related to biology or person)
 #### ii run
 #### iii runDir: location of directory with all the runs from sequencing
 -must contain downstream Cellranger Bam file (possorted.bam) and folder with filtered_feature_bc_matrix/barcodes.tsv.gz in the following manner
+
 -runDir/run/run/outs/count/possorted_genome_bam.bam
+
 -runDir/run/run/outs/count/filtered_feature_bc_matrix/barcodes.tsv.gz
 
 #### iv Location of Axiom array data
