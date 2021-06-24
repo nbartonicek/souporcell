@@ -6,10 +6,6 @@ import os
 import re
 import sys
 
-#>>> inDir="/share/ScratchGeneral/nenbar/projects/CITE/scripts/souporcell/4513_4530_commonvariants_1x"
-inDir="/share/ScratchGeneral/nenbar/projects/CITE/project_results/souporcell/TNBC/TNBC_003"
-#>>> finalVcf="/share/ScratchGeneral/nenbar/projects/CITE/scripts/souporcell/4513_4530_Blood.b38.vcf"
-finalVcf="/share/ScratchGeneral/nenbar/projects/CITE/genotyping/TNBC/TNBC_003/step2/4744_4419_3960.b38.vcf"
 #read arguments to the script
 inDir = sys.argv[1]
 finalVcf = sys.argv[2]
