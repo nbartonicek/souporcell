@@ -4,33 +4,29 @@ import os
 
 #this script imports information about the project name, run ID, directory of the bam file
 #location of the axiom genotyping array as well as sample IDs 
-# and starts souporcell analysis
+#and starts souporcell analysis
 
-df = pd.read_csv("sample_information.csv") 
+df = pd.read_csv("samples.csv") 
 
 for index,row in df.iterrows():
 	projectname=row['projectname']
 	run=row['run']
 	runDir=row['runDir']
 	annotation=row['annotation']
-	S1=str(int(row['S1']))
-	S2=str(int(row['S2']))
-	total=S1+","+S2
-	if df.shape[1]>6:
-		if not pd.isna(row['S3']):
-			S3=str(int(row['S3']))
-			total=total+","+S3
-	if df.shape[1]>7:
-		if not pd.isna(row['S4']):
-			S4=str(int(row['S4']))
-			total=total+","+S4
-	if df.shape[1]>8:
-		if not pd.isna(row['S5']):
-			S5=str(int(row['S5']))
-			total=total+","+S5
-	if df.shape[1]>9:
-		if not pd.isna(row['S6']):
-			S6=str(int(row['S6']))
-			total=total+","+S6
+#find the number of samples despite the comma placement
+	columnNames=df.columns.astype(str)
+	unnamed=list(filter(lambda x:'Unnamed' in x,columnNames))
+	nSamples=len(df.columns)-4-len(unnamed)
+#add each sample per run to sample list 
+	total=""
+	for nCol in range(1,nSamples+1):
+		columnName='S'+str(nCol)
+		#check for empty
+		if not pd.isna(row[columnName]):
+			Si=str(int(row[columnName]))
+		if nCol == 1:
+			total = Si
+		else:
+			total = total+","+Si
 	print(total)
-	os.system("bash genotype_souporcell_annotate_samplenum_neomet_02.sh "+projectname+" "+run+" "+runDir+" "+annotation+" "+total)
+	os.system("bash 2.genotype_souporcell_annotate.sh "+projectname+" "+run+" "+runDir+" "+annotation+" "+total)

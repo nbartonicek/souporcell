@@ -1,6 +1,5 @@
 #!/bin/bash
 #$ -j y
-#$ -cwd
 #$ -N soup$2
 #$ -l mem_requested=140G,tmp_requested=140G,tmpfree=140G
 #$ -q all.q
