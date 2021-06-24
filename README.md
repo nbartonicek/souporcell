@@ -76,9 +76,10 @@ bedtools >v2.22.0
 
 Please keep the headers as in the table above, with sample columns as S1..Sn where n is the number of samples
 
+#### examples of sample files for multiple runs: samples.csv and runs without genotyping: samples_no_genotype.csv
+
 ## 4. Starter scripts:
 #### 1.start_pipeline.py that reads the csv file with runs and starts for each:
 #### 2.genotype_souporcell_annotate.sh that for each run starts jobs for genotyping analysis, souporcell demux, and annotation of demuxed samples based on genotype
 #### 3.souporcell.sh that sets parameters for souporcell analysis (memory, directory structure)
 #### 4.annotate.py that annotates the souporcell results in clusters.tsv into clusters_annotated.tsv, based on information in cluster_genotypes.vcf and sample information in the file ending with b38.vcf from the genotyping analysis.
-#### examples of sample files for multiple runs: samples.csv and runs without genotyping: samples_no_genotype.csv
