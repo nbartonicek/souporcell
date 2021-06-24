@@ -88,8 +88,13 @@ Please keep the headers as in the table above, with sample columns as S1..Sn whe
 ## Troubleshooting
 
 1. If encountering weird names of samples in the end, check the regexp in the 4.annotate.py which operates by:
+
 ids_trimmed = [re.sub(r'.CEL', '', id) for id in GPb1_donor_ids]
+
 ids_trimmed = [re.sub(r'_Blood.*', '', id) for id in ids_trimmed]
+
 ids_trimmed = [re.sub(r'_Tumou.*', '', id) for id in ids_trimmed]
+
 ids_trimmed = [re.sub(r'_\d$', '', id) for id in ids_trimmed]
+
 ids_trimmed = [re.sub(r'.*_', '', id) for id in ids_trimmed]
