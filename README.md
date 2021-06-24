@@ -33,17 +33,18 @@ Currently two available:
 ## 4. raw Axiom genotyping data
 
 -collection of CEL files and annotations, requires CEL files with sample names in them, table_rpt.txt
+
 -place into your project directory under raw_data/genotype/"annotation" where "annotation" is the 4th column in your samplesheet
 
 ## 5. Tools for analysis of Axiom data 
--available as modules on the Garvan cluster, no need to install
+-available as modules on the Garvan cluster, no need to install:
 
-#### -gcc >v.4.8.2
-#### -picard-tools >v1.138
-#### -plink/prebuilt >v1.07
-#### -plink/prebuilt >v1.90beta_3g
-#### -vcftools >v0.1.16
-#### -bedtools >v2.22.0
+gcc >v.4.8.2
+picard-tools >v1.138
+plink/prebuilt >v1.07
+plink/prebuilt >v1.90beta_3g
+vcftools >v0.1.16
+bedtools >v2.22.0
 
 ## 6. Samplesheet in csv format with information on: 
 #### i project_name 
@@ -56,7 +57,10 @@ Currently two available:
 
 -runDir/run/run/outs/count/filtered_feature_bc_matrix/barcodes.tsv.gz
 
-#### iv Location of Axiom array data
+#### iv Name of Axiom array data
+
+-expected to be in your project directory, folder raw_files/genotyping
+
 #### v Sample IDs (as many as you have per run, below is an example for 3)
 
 | projectname | run | runDir | annotation | S1 | S2 | S3 |
