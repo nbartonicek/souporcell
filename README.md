@@ -26,10 +26,9 @@ Currently two available:
 
 -alternatively, download UKB_WCSG and PMDA.r7 annotation, available from Thermofisher pages
 
+download https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%20Cell%20Projects/demultiplexing/annotation.tar.gz
 
 `cd genotyping`
-
-download https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%20Cell%20Projects/demultiplexing/annotation.tar.gz
 
 `tar -xvf annotation.tar.gz`
 
