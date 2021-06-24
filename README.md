@@ -24,7 +24,7 @@ Currently two available:
 
 -download the annotation.tar.gz with all required files from Swarbrick lab dropbox into your project directory, genotyping folder
 
--alternatively, download UKB_WCSG and PMDA.r7 annotation, available from Thermofisher pages
+-alternatively, download UKB_WCSG and PMDA.r7 annotation, available from Thermofisher pages such as https://www.thermofisher.com/order/catalog/product/901153?SID=srch-srp-901153 at the bottom. Must contain .xml files with annotation.
 
 download https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%20Cell%20Projects/demultiplexing/annotation.tar.gz
 
