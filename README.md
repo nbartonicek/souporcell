@@ -12,7 +12,7 @@ Requirements:
 - available from Swarbrick lab dropbox
 - update from ThermoFisher web site (difficult to find, must have an account)
 
-`wget https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%20Cell%20Projects/demultiplexing/APT_2.10.2.2_Linux_64_bitx86_binaries.zip`
+download from https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%20Cell%20Projects/demultiplexing/APT_2.10.2.2_Linux_64_bitx86_binaries.zip
 
 `unzip APT_2.10.2.2_Linux_64_bitx86_binaries.zip`
 
@@ -29,7 +29,7 @@ Currently two available:
 
 `cd genotyping`
 
-`wget https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%20Cell%20Projects/demultiplexing/annotation.tar.gz`
+download https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%20Cell%20Projects/demultiplexing/annotation.tar.gz
 
 `tar -xvf annotation.tar.gz`
 
