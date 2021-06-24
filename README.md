@@ -72,7 +72,7 @@ bedtools >v2.22.0
 
 | projectname | run | runDir | annotation | S1 | S2 | S3 |
 | ----------- | --- | ------ | ---------- | -- | -- | -- |
-| neomet_01  | Neomet_Pool1 | /share/ScratchGeneral/niaden/NeoMet_Nov2020/Pool1 | HAR8323_UKB_2020_RESULTS | 4583 | 4613 | 4622 |
+| Eva_PCa_01  | PCa1 | /directflow/GWCCGPipeline/projects/bioinformatics/R_200416_EVAAPO_INT_10X/200626_A00152_0271_BHFHVNDSXY/GE | HAR8323_UKB_2020_RESULTS | 20384 | 19616 | 20216 |
 
 Please keep the headers as in the table above, with sample columns as S1..Sn where n is the number of samples
 
