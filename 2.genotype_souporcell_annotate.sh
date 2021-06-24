@@ -30,7 +30,7 @@ bamDir=$runDir/$run/$run"/outs/count"
 annotationDir=$projectDir/"genotyping/annotation"
 sampleNames=`echo $samples | tr "," "_"`
 sampleArray=($(echo "$samples" | tr ',' '\n'))
-arrayDir=$projectDir"/raw_files/genotype/$annotation/"
+arrayDir=$projectDir"/raw_files/genotyping/$annotation/"
 genotypeDir=$projectDir/"genotyping/$projectname/$run"
 outDir=$projectDir"/project_results/souporcell/$projectname/$run"
 step1Dir=$genotypeDir/step1
@@ -164,8 +164,8 @@ qsub -N souporcellStep1$run -q long.q -wd $logDir -pe smp 1 -P TumourProgression
 
 ########### 3. annotate 
 
-annotate the output with python script
-modify the outfile so that it has real info
+#annotate the output with python script
+#modify the outfile so that it has real info
 if [[ $annotation != +(NA|NONE|na|none) ]]; then 
 
 	annotateLine="python $scriptsPath/4.annotate.py $outDir $finalVCF"
