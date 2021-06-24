@@ -9,7 +9,7 @@ Requirements:
 
 ## 2. Affymetrix Analysis Power Tools (APT)
 - Thermofisher/Affymetrix tool suite for analysis of axiom data
-- available from dropbox
+- available from Swarbrick lab dropbox
 - update from ThermoFisher web site (difficult to find, must have an account)
 
 `wget https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%20Cell%20Projects/demultiplexing/APT_2.10.2.2_Linux_64_bitx86_binaries.zip`
@@ -18,11 +18,14 @@ Requirements:
 
 `cp apt-2.10.2.2-x86_64-intel-linux/bin/* ~/local/bin`
 
-## 3. appropriate Axiom annotation files
+## 3. Axiom annotation files
 
 Currently two available:
--UKB_WCSG and PMDA.r7, available to download from Thermofisher pages
--alternatively, download the annotation.tar.gz with all required files from dropbox into your project directory, genotyping folder
+
+-download the annotation.tar.gz with all required files from Swarbrick lab dropbox into your project directory, genotyping folder
+
+-alternatively, download UKB_WCSG and PMDA.r7 annotation, available from Thermofisher pages
+
 
 `cd genotyping`
 
@@ -40,15 +43,20 @@ Currently two available:
 -available as modules on the Garvan cluster, no need to install:
 
 gcc >v.4.8.2
+
 picard-tools >v1.138
+
 plink/prebuilt >v1.07
+
 plink/prebuilt >v1.90beta_3g
+
 vcftools >v0.1.16
+
 bedtools >v2.22.0
 
 ## 6. Samplesheet in csv format with information on: 
 #### i project_name 
--preferably something related to biology or person)
+-preferably something related to biology or person
 #### ii run
 #### iii runDir: location of directory with all the runs from sequencing
 -must contain downstream Cellranger Bam file (possorted.bam) and folder with filtered_feature_bc_matrix/barcodes.tsv.gz in the following manner
@@ -57,7 +65,7 @@ bedtools >v2.22.0
 
 -runDir/run/run/outs/count/filtered_feature_bc_matrix/barcodes.tsv.gz
 
-#### iv Name of Axiom array data
+#### iv Name of Axiom array data (enter NONE or NA if no genotyping information)
 
 -expected to be in your project directory, folder raw_files/genotyping
 
@@ -74,3 +82,4 @@ Please keep the headers as in the table above, with sample columns as S1..Sn whe
 #### 2.genotype_souporcell_annotate.sh that for each run starts jobs for genotyping analysis, souporcell demux, and annotation of demuxed samples based on genotype
 #### 3.souporcell.sh that sets parameters for souporcell analysis (memory, directory structure)
 #### 4.annotate.py that annotates the souporcell results in clusters.tsv into clusters_annotated.tsv, based on information in cluster_genotypes.vcf and sample information in the file ending with b38.vcf from the genotyping analysis.
+#### example files for multiple runs: samples.csv and runs without genotyping: samples_no_genotype.csv
