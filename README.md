@@ -5,7 +5,19 @@ This site contains scripts for demultiplexing single-cell data with Souporcell, 
 Requirements:
 ## 1. Souporcell (requires Singularity > v.3.0)
 
+- place souporcell image into a container directory that is in your $PATH
+
+- example: add this line to ~/.bashrc : export PATH="/some/directory/nenbar/local/images:$PATH" and then
+
+`source ~/.bashrc`
+
+`cd /some/directory/nenbar/local/images`
+
 `singularity pull shub://wheaton5/souporcell`
+
+-test if it worked:
+
+`singularity exec  souporcell_pipeline.py --help`
 
 ## 2. Affymetrix Analysis Power Tools (APT)
 - Thermofisher/Affymetrix tool suite for analysis of axiom data
