@@ -103,7 +103,13 @@ Please keep the headers as in the table above, with sample columns as S1..Sn whe
 
 ## Troubleshooting
 
-If encountering weird names of samples in the end, check the regexp in the 4.annotate.py which operates by:
+1. If the process fails half way and the last file is a sorted bam file, it probably didn't have enough memory to perform merging
+
+- solution: increase memory in the file 3.souporcell.sh, by modifying the 4th line: #$ -l mem_requested=140G,tmp_requested=50G,tmpfree=50G and increasing the mem_requested
+
+
+
+2. If encountering weird names of samples in the end, check the regexp in the 4.annotate.py which operates by:
 
 ids_trimmed = [re.sub(r'.CEL', '', id) for id in GPb1_donor_ids]
 
