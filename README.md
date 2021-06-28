@@ -30,6 +30,10 @@ download from https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%2
 
 `cp apt-2.10.2.2-x86_64-intel-linux/bin/* ~/local/bin`
 
+-test if it worked:
+
+`apt-genotype-axiom --help`
+
 ## 3. Axiom annotation files
 
 Currently two available:
