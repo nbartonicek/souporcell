@@ -17,7 +17,7 @@ Requirements:
 
 -test if it worked:
 
-`singularity exec  souporcell_pipeline.py --help`
+`singularity exec souporcell.sif souporcell_pipeline.py --help`
 
 ## 2. Affymetrix Analysis Power Tools (APT)
 - Thermofisher/Affymetrix tool suite for analysis of axiom data
