@@ -1,0 +1,86 @@
+/home/nenbar/.profile: line 1: /home/nenbar/python/venv/base/bin/activate: No such file or directory
+############################# [omega-6-21.local PROLOG] - JOB_ID:766320 TASK_ID:undefined #############################
+Fri Jun 25 07:43:28 AEST 2021 [omega-6-21.local PROLOG]: xfs_quota -x -c 'project -s -p /scratch_local/766320.1.long.q 766320' /scratch_local
+Fri Jun 25 07:43:28 AEST 2021 [omega-6-21.local PROLOG]: xfs_quota -x -c 'limit -p bhard=140G 766320' /scratch_local
+Setting up project 766320 (path /scratch_local/766320.1.long.q)...
+Processed 1 (/etc/projects and cmdline) paths for project 766320 with recursion depth infinite (-1).
+JOB: 766320 TASK: undefined
+omega-6-21.local 140G /scratch_local/766320.1.long.q
+Initial log joint probability = -70534.9
+    Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+       6      -60339.4   0.000247642   0.000500597           1           1       11   
+Optimization terminated normally: 
+  Convergence detected: relative gradient magnitude is below tolerance
+/usr/local/envs/py36/lib/python3.6/site-packages/pystan/misc.py:399: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  elif np.issubdtype(np.asarray(v).dtype, float):
+55786 excluded for potential RNA editing
+3187 doublets excluded from genotype and ambient RNA estimation
+1593 not used for soup calculation due to possible RNA edit
+checking modules
+imports done
+checking bam for expected tags
+checking fasta
+restarting pipeline in existing directory /outDir
+generating fastqs with cell barcodes and umis in readname
+remapping
+cleaning up tmp fastqs
+repopulating cell barcode and UMI tags
+False
+False
+retag.py --sam /outDir/souporcell_minimap_tmp_0.sam --no_umi False --umi_tag UB --cell_tag CB --out /outDir/souporcell_retag_tmp_0.bam
+False
+False
+retag.py --sam /outDir/souporcell_minimap_tmp_1.sam --no_umi False --umi_tag UB --cell_tag CB --out /outDir/souporcell_retag_tmp_1.bam
+False
+False
+retag.py --sam /outDir/souporcell_minimap_tmp_2.sam --no_umi False --umi_tag UB --cell_tag CB --out /outDir/souporcell_retag_tmp_2.bam
+False
+False
+retag.py --sam /outDir/souporcell_minimap_tmp_3.sam --no_umi False --umi_tag UB --cell_tag CB --out /outDir/souporcell_retag_tmp_3.bam
+False
+False
+retag.py --sam /outDir/souporcell_minimap_tmp_4.sam --no_umi False --umi_tag UB --cell_tag CB --out /outDir/souporcell_retag_tmp_4.bam
+False
+False
+retag.py --sam /outDir/souporcell_minimap_tmp_5.sam --no_umi False --umi_tag UB --cell_tag CB --out /outDir/souporcell_retag_tmp_5.bam
+False
+False
+retag.py --sam /outDir/souporcell_minimap_tmp_6.sam --no_umi False --umi_tag UB --cell_tag CB --out /outDir/souporcell_retag_tmp_6.bam
+False
+False
+retag.py --sam /outDir/souporcell_minimap_tmp_7.sam --no_umi False --umi_tag UB --cell_tag CB --out /outDir/souporcell_retag_tmp_7.bam
+False
+False
+retag.py --sam /outDir/souporcell_minimap_tmp_8.sam --no_umi False --umi_tag UB --cell_tag CB --out /outDir/souporcell_retag_tmp_8.bam
+False
+False
+retag.py --sam /outDir/souporcell_minimap_tmp_9.sam --no_umi False --umi_tag UB --cell_tag CB --out /outDir/souporcell_retag_tmp_9.bam
+False
+False
+retag.py --sam /outDir/souporcell_minimap_tmp_10.sam --no_umi False --umi_tag UB --cell_tag CB --out /outDir/souporcell_retag_tmp_10.bam
+False
+False
+retag.py --sam /outDir/souporcell_minimap_tmp_11.sam --no_umi False --umi_tag UB --cell_tag CB --out /outDir/souporcell_retag_tmp_11.bam
+False
+False
+retag.py --sam /outDir/souporcell_minimap_tmp_12.sam --no_umi False --umi_tag UB --cell_tag CB --out /outDir/souporcell_retag_tmp_12.bam
+False
+False
+retag.py --sam /outDir/souporcell_minimap_tmp_13.sam --no_umi False --umi_tag UB --cell_tag CB --out /outDir/souporcell_retag_tmp_13.bam
+False
+False
+retag.py --sam /outDir/souporcell_minimap_tmp_14.sam --no_umi False --umi_tag UB --cell_tag CB --out /outDir/souporcell_retag_tmp_14.bam
+False
+False
+retag.py --sam /outDir/souporcell_minimap_tmp_15.sam --no_umi False --umi_tag UB --cell_tag CB --out /outDir/souporcell_retag_tmp_15.bam
+sorting retagged bam files
+merging sorted bams
+cleaning up tmp samfiles
+using common variants
+16
+running vartrix
+running souporcell clustering
+/opt/souporcell/souporcell/target/release/souporcell -k 3 -a /outDir/alt.mtx -r /outDir/ref.mtx --restarts 100 -b /outDir/barcodes.tsv --min_ref 10 --min_alt 10 --threads 16
+running souporcell doublet detection
+running co inference of ambient RNA and cluster genotypes
+done

@@ -95,8 +95,9 @@ if [[ $annotation != +(NA|NONE|na|none) ]]; then
 	then 
 		genotypeLine="apt-genotype-axiom --log-file $step1Dir/"apt-genotype-axiom.log" --arg-file $annotationDir/"Axiom_PMDA.r7.apt-genotype-axiom.AxiomCN_GT1.apt2.xml" --analysis-files-path $annotationDir --out-dir $step1Dir --dual-channel-normalization true --cel-files $step1Dir/"cel_list2.txt" --summaries --write-models --batch-folder $step1Dir"
 	else
-		echo 
-
+		echo "Annotation not found";
+		break
+	fi
 	qsub -q all.q -b y -j y -N genotypeStep1$run -wd $logDir -pe smp 10 -V $genotypeLine
 
 	############### run the command line version of SNPolisher
@@ -115,7 +116,7 @@ if [[ $annotation != +(NA|NONE|na|none) ]]; then
 
 	#if this succeeded, there should be files in the OTV folder: $step1Dir/OTV
 	#the SNPs that are to be kept are in file $step1Dir/OTV/OTV.keep.ps
-	wc -l $step1Dir/OTV/OTV.keep.ps
+	#wc -l $step1Dir/OTV/OTV.keep.ps
 
 
 	############### create vcf and convert from hg19 to b38
@@ -140,7 +141,7 @@ if [[ $annotation != +(NA|NONE|na|none) ]]; then
 
 
 	#if this succeeded, there should be file $step2Dir"/"$projectname".b38.vcf". that will be used for imputation and further analysis
-	wc -l $finalVCF;
+	#wc -l $finalVCF;
 fi
 
 ############# 2. souporcell 
