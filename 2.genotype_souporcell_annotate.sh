@@ -1,7 +1,4 @@
 #!/bin/bash
-#To do
-#1.make the script aware of the number of samples
-
 
 module load centos6.10/gi/gcc/4.8.2
 module load centos6.10/gi/picard-tools/1.138
