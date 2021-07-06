@@ -5,18 +5,34 @@ This site contains scripts for demultiplexing single-cell data with Souporcell, 
 Requirements:
 ## 1. Souporcell (requires Singularity > v.3.0)
 
+- place souporcell image into a container directory that is in your $PATH
+
+- example: add this line to ~/.bashrc : export PATH="/some/directory/nenbar/local/images:$PATH" and then
+
+`source ~/.bashrc`
+
+`cd /some/directory/nenbar/local/images`
+
 `singularity pull shub://wheaton5/souporcell`
+
+-test if it worked:
+
+`singularity exec souporcell_latest.sif souporcell_pipeline.py --help`
 
 ## 2. Affymetrix Analysis Power Tools (APT)
 - Thermofisher/Affymetrix tool suite for analysis of axiom data
 - available from Swarbrick lab dropbox
 - update from ThermoFisher web site (difficult to find, must have an account)
 
-`wget https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%20Cell%20Projects/demultiplexing/APT_2.10.2.2_Linux_64_bitx86_binaries.zip`
+download from https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%20Cell%20Projects/demultiplexing/APT_2.10.2.2_Linux_64_bitx86_binaries.zip
 
 `unzip APT_2.10.2.2_Linux_64_bitx86_binaries.zip`
 
 `cp apt-2.10.2.2-x86_64-intel-linux/bin/* ~/local/bin`
+
+-test if it worked:
+
+`apt-genotype-axiom --help`
 
 ## 3. Axiom annotation files
 
@@ -24,12 +40,11 @@ Currently two available:
 
 -download the annotation.tar.gz with all required files from Swarbrick lab dropbox into your project directory, genotyping folder
 
--alternatively, download UKB_WCSG and PMDA.r7 annotation, available from Thermofisher pages
+-alternatively, download UKB_WCSG and PMDA.r7 annotation, available from Thermofisher pages such as https://www.thermofisher.com/order/catalog/product/901153?SID=srch-srp-901153 at the bottom. Must contain .xml files with annotation.
 
+download https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%20Cell%20Projects/demultiplexing/annotation.tar.gz
 
 `cd genotyping`
-
-`wget https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%20Cell%20Projects/demultiplexing/annotation.tar.gz`
 
 `tar -xvf annotation.tar.gz`
 
@@ -73,13 +88,37 @@ bedtools >v2.22.0
 
 | projectname | run | runDir | annotation | S1 | S2 | S3 |
 | ----------- | --- | ------ | ---------- | -- | -- | -- |
-| neomet_01  | Neomet_Pool1 | /share/ScratchGeneral/niaden/NeoMet_Nov2020/Pool1 | HAR8323_UKB_2020_RESULTS | 4583 | 4613 | 4622 |
+| Eva_PCa_01  | PCa1 | /directflow/GWCCGPipeline/projects/bioinformatics/R_200416_EVAAPO_INT_10X/200626_A00152_0271_BHFHVNDSXY/GE | HAR8323_UKB_2020_RESULTS | 20384 | 19616 | 20216 |
 
 Please keep the headers as in the table above, with sample columns as S1..Sn where n is the number of samples
+
+#### examples of sample files for multiple runs: samples.csv and runs without genotyping: samples_no_genotype.csv
 
 ## 4. Starter scripts:
 #### 1.start_pipeline.py that reads the csv file with runs and starts for each:
 #### 2.genotype_souporcell_annotate.sh that for each run starts jobs for genotyping analysis, souporcell demux, and annotation of demuxed samples based on genotype
 #### 3.souporcell.sh that sets parameters for souporcell analysis (memory, directory structure)
 #### 4.annotate.py that annotates the souporcell results in clusters.tsv into clusters_annotated.tsv, based on information in cluster_genotypes.vcf and sample information in the file ending with b38.vcf from the genotyping analysis.
-#### example files for multiple runs: samples.csv and runs without genotyping: samples_no_genotype.csv
+
+
+## Troubleshooting
+
+1. If the process fails half way and the last file is a sorted bam file, it probably didn't have enough memory to perform merging
+
+- solution: increase memory in the file 3.souporcell.sh, by modifying the 4th line: 
+
+#$ -l mem_requested=140G,tmp_requested=50G,tmpfree=50G and increasing the mem_requested
+
+
+
+2. If encountering weird names of samples in the end, check the regexp in the 4.annotate.py which operates by:
+
+ids_trimmed = [re.sub(r'.CEL', '', id) for id in GPb1_donor_ids]
+
+ids_trimmed = [re.sub(r'_Blood.*', '', id) for id in ids_trimmed]
+
+ids_trimmed = [re.sub(r'_Tumou.*', '', id) for id in ids_trimmed]
+
+ids_trimmed = [re.sub(r'_\d$', '', id) for id in ids_trimmed]
+
+ids_trimmed = [re.sub(r'.*_', '', id) for id in ids_trimmed]
