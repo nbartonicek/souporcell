@@ -1,0 +1,13 @@
+/home/nenbar/.profile: line 1: /home/nenbar/python/venv/base/bin/activate: No such file or directory
+#    GUI      1 2 | logging to file '/share/ScratchGeneral/nenbar/projects/CITE/genotyping/neomet_02/NeoMet_Pool_015/step1/apt-genotype-axiom.log'
+#    INFO     1 2 | Application: apt-genotype-axiom
+#    INFO     1 3 | Version: 2.10.0(2.10.0) stash.amer.thermo.com/ma-alg/apt2-genotyping.git/release/APT_2.10.0@321b13f822(38a8486d9a) 2018-04-20-06:58
+#    INFO     1 3 | CPP version: c++11 (201103L) 
+#    INFO     1 3 | Log file selector: "*:9"
+#    INFO     1 3 | Console selector: "OR(info,warning,error,help,INFO,WARNING,ERROR,HELP)"
+#    info     1 3 | apt-genotype-axiom v1.0.0
+#    info     1 3 | 
+#    LOG      1 3 | Parsing argument file /share/ScratchGeneral/nenbar/projects/CITE/genotyping/annotation/Axiom_UKB_WCSG.r5.apt-genotype-axiom.AxiomCN_GT1.apt2.xml
+#    WARNING  1 3 | Multiple declarations of parameter: --dual-channel-normalization=true
+#    WARNING  1 3 | Multiple declarations of parameter: --summaries=true
+#    WARNING  1 3 | Multiple declarations of parameter: --write-models=true

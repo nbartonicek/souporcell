@@ -36,8 +36,12 @@ finalVCF=$step2Dir"/"$sampleNames".b38.vcf"
 
 ############ CHECK FOR INPUTS
 #make sure that the directory structure reflects the sample file
-if [ ! -f "$bamDir/possorted_genome_bam.bam" ]; then echo "possorted_genome_bam.bam not found, check runDir column and bamDir variable, or file permissions";fi
-if [ ! -f "$bamDir/filtered_feature_bc_matrix/barcodes.tsv.gz" ]; then echo "filtered_feature_bc_matrix/barcodes.tsv.gz not found in $bamDir directory, check runDir column and bamDir variable, or file permissions";fi
+if [ ! -f "$bamDir/possorted_genome_bam.bam" ]; then echo "possorted_genome_bam.bam not found, check runDir column and bamDir variable, or file permissions";
+	break;
+fi
+if [ ! -f "$bamDir/filtered_feature_bc_matrix/barcodes.tsv.gz" ]; then echo "filtered_feature_bc_matrix/barcodes.tsv.gz not found in $bamDir directory, check runDir column and bamDir variable, or file permissions";
+	break;
+fi
 
 #check that the SNP annotation is available, if not, download the file
 if [ ! -f "$annotationDir/common_variants_grch38.vcf" ]; then echo "downloading the annotation file";
@@ -98,7 +102,7 @@ if [[ $annotation != +(NA|NONE|na|none) ]]; then
 		echo "Annotation not found";
 		break
 	fi
-	qsub -q all.q -b y -j y -N genotypeStep1$run -wd $logDir -pe smp 10 -V $genotypeLine
+	qsub -q short.q -b y -j y -N genotypeStep1$run -wd $logDir -pe smp 10 -V $genotypeLine
 
 	############### run the command line version of SNPolisher
 
@@ -108,11 +112,11 @@ if [[ $annotation != +(NA|NONE|na|none) ]]; then
 
 	otvLine="otv-caller --pid-file $step1Dir/SNPolisher/Recommended.ps --batch-folder $step1Dir --output-dir $step1Dir/OTV"
 
-	qsub -q all.q -b y -j y -N genotypeStep2$run -hold_jid genotypeStep1$run -wd $logDir -pe smp 10 -V $psmetricsLine
+	qsub -q short.q -b y -j y -N genotypeStep2$run -hold_jid genotypeStep1$run -wd $logDir -pe smp 10 -V $psmetricsLine
 
-	qsub -q all.q -b y -j y -N genotypeStep3$run -hold_jid genotypeStep2$run -wd $logDir -pe smp 10 -V $psclassLine
+	qsub -q short.q -b y -j y -N genotypeStep3$run -hold_jid genotypeStep2$run -wd $logDir -pe smp 10 -V $psclassLine
 
-	qsub -q all.q -b y -j y -N genotypeStep4$run -hold_jid genotypeStep3$run -wd $logDir -pe smp 20 -V $otvLine
+	qsub -q short.q -b y -j y -N genotypeStep4$run -hold_jid genotypeStep3$run -wd $logDir -pe smp 20 -V $otvLine
 
 	#if this succeeded, there should be files in the OTV folder: $step1Dir/OTV
 	#the SNPs that are to be kept are in file $step1Dir/OTV/OTV.keep.ps
@@ -123,21 +127,21 @@ if [[ $annotation != +(NA|NONE|na|none) ]]; then
 	# fetch sqlite annotation from https://www.thermofisher.com/order/catalog/product/901153?SID=srch-srp-901153 
 	# WARNING: it will throw an error if the file already exits
 	prepareDirLine="cp -R $step1Dir/AxiomAnalysisSuiteData $step1Dir/OTV"
-	qsub -q all.q -b y -j y -N genotypeStep5$run -hold_jid genotypeStep4$run -wd $logDir -pe smp 1 -V $prepareDirLine
+	qsub -q short.q -b y -j y -N genotypeStep5$run -hold_jid genotypeStep4$run -wd $logDir -pe smp 1 -V $prepareDirLine
 
 	runPolisherLine="/share/ScratchGeneral/nenbar/local/lib/apt-2.10.2.2-x86_64-intel-linux/bin/apt-format-result --batch-folder $step1Dir/OTV --snp-list-file $step1Dir/OTV/OTV.keep.ps --annotation-file $annotationDir/Axiom_UKB_WCSG.na35.annot.db --export-vcf-file $step2Dir"/"$sampleNames".b37.vcf""
-	qsub -q all.q -b y -j y -N genotypeStep6$run -hold_jid genotypeStep5$run -wd $logDir -pe smp 1 -V $runPolisherLine
+	qsub -q short.q -b y -j y -N genotypeStep6$run -hold_jid genotypeStep5$run -wd $logDir -pe smp 1 -V $runPolisherLine
 
 	#java -jar /share/ClusterShare/software/contrib/gi/picard-tools/1.138/picard.jar CreateSequenceDictionary R=/share/ClusterShare/biodata/contrib/nenbar/genomes/human/hg38/hg38.fa O=/share/ClusterShare/biodata/contrib/nenbar/genomes/human/hg38/hg38.dict
 	cleanVCFLine="more $step2Dir"/"$sampleNames".b37.vcf" | grep -v UNKNOWNPOSITION | awk 'NR>3' >$step2Dir"/"$sampleNames".b37.clean.vcf""
-	qsub -q all.q -b y -j y -N genotypeStep7$run -hold_jid genotypeStep6$run -wd $logDir -pe smp 1 -V $cleanVCFLine
+	qsub -q short.q -b y -j y -N genotypeStep7$run -hold_jid genotypeStep6$run -wd $logDir -pe smp 1 -V $cleanVCFLine
 
 	#watch out this step needs a bit more memory
 	liftoverLine="java -jar ~/local/bin/picard.jar LiftoverVcf I=$step2Dir"/"$sampleNames".b37.clean.vcf" O=$step2Dir"/"$sampleNames".hg38.vcf" CHAIN=$annotationDir"/b37ToHg38.over.chain" REJECT=$annotationDir"/rejected_variants.vcf" R=/share/ClusterShare/biodata/contrib/nenbar/genomes/human/hg38/hg38.fa"
-	qsub -q all.q -b y -j y -N genotypeStep8$run -hold_jid genotypeStep7$run -wd $logDir -pe smp 5 -V $liftoverLine
+	qsub -q short.q -b y -j y -N genotypeStep8$run -hold_jid genotypeStep7$run -wd $logDir -pe smp 5 -V $liftoverLine
 
 	hg38toB38Line="more $step2Dir"/"$sampleNames".hg38.vcf" | sed s/chr// | awk 'NR>3' > $finalVCF"
-	qsub -q all.q -b y -j y -N genotypeStep9$run -hold_jid genotypeStep8$run -wd $logDir -pe smp 1 -V $hg38toB38Line
+	qsub -q short.q -b y -j y -N genotypeStep9$run -hold_jid genotypeStep8$run -wd $logDir -pe smp 1 -V $hg38toB38Line
 
 
 	#if this succeeded, there should be file $step2Dir"/"$projectname".b38.vcf". that will be used for imputation and further analysis
@@ -167,7 +171,7 @@ qsub -N souporcellStep1$run -q long.q -wd $logDir -pe smp 1 -P TumourProgression
 if [[ $annotation != +(NA|NONE|na|none) ]]; then 
 
 	annotateLine="python $scriptsPath/4.annotate.py $outDir $finalVCF"
-	qsub -q all.q -b y -j y -N annotate2$run -hold_jid souporcellStep1$run -wd $logDir -pe smp 1 -V $annotateLine
+	qsub -q short.q -b y -j y -N annotate2$run -hold_jid souporcellStep1$run -wd $logDir -pe smp 1 -V $annotateLine
 
 fi
   

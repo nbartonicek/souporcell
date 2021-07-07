@@ -1,0 +1,8 @@
+/home/nenbar/.profile: line 1: /home/nenbar/python/venv/base/bin/activate: No such file or directory
+############################# [omega-1-32.local PROLOG] - JOB_ID:790072 TASK_ID:undefined #############################
+Wed Jul  7 09:53:51 AEST 2021 [omega-1-32.local PROLOG]: xfs_quota -x -c 'project -s -p /scratch_local/790072.1.long.q 790072' /scratch_local
+Wed Jul  7 09:53:51 AEST 2021 [omega-1-32.local PROLOG]: xfs_quota -x -c 'limit -p bhard=140G 790072' /scratch_local
+Setting up project 790072 (path /scratch_local/790072.1.long.q)...
+Processed 1 (/etc/projects and cmdline) paths for project 790072 with recursion depth infinite (-1).
+JOB: 790072 TASK: undefined
+omega-1-32.local 140G /scratch_local/790072.1.long.q

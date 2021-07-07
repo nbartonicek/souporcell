@@ -1,0 +1,132 @@
+#%%field-000=date-time,string8
+#%%field-001=facility,string8
+#%%field-002=level,int8
+#%%field-003=mem usage (MB),string8
+#%%field-004=message,string8
+#
+date-time	facility	level	mem usage (MB)	message
+07/07/2021 09:55:25	GUI,INFO,LOG	1	2	logging to file 'ps-metrics-1625615725.log'
+07/07/2021 09:55:25	INFO	1	2	Application: ps-metrics
+07/07/2021 09:55:25	INFO	1	2	Version: 2.10.2 stash.amer.thermo.com/ma-alg/apt2-snppolisher.git/release/APT_2.10.2@5b62fc9457(75b176a197) 2018-08-25-00:28
+07/07/2021 09:55:25	INFO	1	2	CPP version: c++11 (201103L) 
+07/07/2021 09:55:25	INFO	1	2	Log file selector: "*:9"
+07/07/2021 09:55:25	INFO	1	2	Console selector: "OR(info,warning,error,help,INFO,WARNING,ERROR,HELP)"
+07/07/2021 09:55:25	runtime,PROGRESS	1	2	0.000000,0.000000,0.000000,starting
+07/07/2021 09:55:25	DEBUG	1	2	creating... ps-metrics-node PsMetricsNodeEngine
+07/07/2021 09:55:25	DEBUG,LOG	1	2	original command line: ps-metrics --posterior-file /share/ScratchGeneral/nenbar/projects/CITE/genotyping/neomet_02/NeoMet_Pool_015/step1/AxiomGT1.snp-posteriors.txt --call-file /share/ScratchGeneral/nenbar/projects/CITE/genotyping/neomet_02/NeoMet_Pool_015/step1/AxiomGT1.calls.txt --metrics-file /share/ScratchGeneral/nenbar/projects/CITE/genotyping/neomet_02/NeoMet_Pool_015/step1/SNPolisher/metrics.txt
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-nodes'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-nodes-long'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-nodes-classes'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-data-flow'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-param'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-param-long'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-param-dev'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-param-long-dev'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-all'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-all-long'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@log-machine-name'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:enable'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:disable'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@serialize'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@serialize-pre'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@serialize-post'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@stop'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@stop-after'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:version'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:user-help'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dev-help'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@doxygen-help'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:log-file'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@log-select'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@console-select'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@socket-select'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:console-add-select'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:console-add-neg-select'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:arg-file'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:check-param'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@serialize-dir'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@short-serialize-names'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@resume-file'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@debug'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@break'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-classes'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-all-param-xml'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-user-param-xml'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@export-html-doc'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:use-sockets'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:socket-host'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:socket-port'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:@dump-nodes'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:@dump-nodes-long'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:@dump-nodes-classes'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:@dump-data-flow'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:@dump-param'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:@dump-param-long'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:@dump-param-dev'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:@dump-param-long-dev'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:@dump-all'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:@dump-all-long'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:@log-machine-name'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:enable'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:disable'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:@serialize'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:@serialize-pre'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:@serialize-post'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:@stop'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:@stop-after'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:posterior-file'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:multi-posterior-file'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:call-file'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:chp-files'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:batch-folder'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:batch-folder-data-dir'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:pid-file'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:metrics-file'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:batch-folder-posterior-file'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:batch-folder-blob-file'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:batch-folder-multi-posterior-file'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:output-dir'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:temp-call-file'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:do-pHW'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:precision'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:summary-file'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:special-snps'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:@use-copynumber'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:clustermin'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:y-restrict'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:use-supplemental'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:use-ssp'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:report-file'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:use-multi-allele'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:multi-metrics-file'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:genotype-freq-file'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:min-genotype-freq-samples'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:ces-k'
+07/07/2021 09:55:25	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-metrics-node:use-eureka'
+07/07/2021 09:55:25	LOG,INFO,GUI	1	3	MainNode::doRunAll(...) start
+07/07/2021 09:55:25	LOG,INFO,GUI	1	3	PsMetricsNodeEngine::doRunAll(...) start
+07/07/2021 09:55:25	GUI,INFO	1	3	Starting ps-metrics engine.
+07/07/2021 09:55:25	GUI,INFO,LOG,PROGRESS	1	3	0.000000,0.000000,3.000000,Starting
+07/07/2021 09:55:25	GUI,INFO,LOG,PROGRESS	1	3	0.000000,1.000000,3.000000,(3%) 
+07/07/2021 09:55:25	GUI,INFO	1	3	Loading calls data.
+07/07/2021 09:55:25	ERROR	1	3	Failed to open file /share/ScratchGeneral/nenbar/projects/CITE/genotyping/neomet_02/NeoMet_Pool_015/step1/AxiomGT1.calls.txt 
+07/07/2021 09:55:25	ERROR	1	3	Can't open file /share/ScratchGeneral/nenbar/projects/CITE/genotyping/neomet_02/NeoMet_Pool_015/step1/AxiomGT1.calls.txt 
+07/07/2021 09:55:25	LOG,INFO,GUI	1	3	PsMetricsNodeEngine::doRunAll(...) stop: Runtime: 0.31 seconds.
+07/07/2021 09:55:25	LOG,INFO,GUI	1	3	MainNode::doRunAll(...) stop: Runtime: 0.32 seconds.
+07/07/2021 09:55:25	ERROR	1	3	MainNode run failed with one or more errors. ErrCode: 1012
+07/07/2021 09:55:25	runtime,PROGRESS	1	3	0.000000,0.000000,0.000000,(0%) done. (rv=1012)
+07/07/2021 09:55:25	info,summary,LOG	1	3	
+07/07/2021 09:55:25	info,summary,LOG	1	3	Message Summary
+07/07/2021 09:55:25	info,summary,LOG	1	3	
+07/07/2021 09:55:25	info,summary,GUI,ERROR_GUI,LOG	1	3	ERROR\tCan't open file /share/ScratchGeneral/nenbar/projects/CITE/genotyping/neomet_02/NeoMet_Pool_015/step1/AxiomGT1.calls.txt \tMsgCount: 1
+07/07/2021 09:55:25	info,summary,GUI,ERROR_GUI,LOG	1	3	ERROR\tFailed to open file /share/ScratchGeneral/nenbar/projects/CITE/genotyping/neomet_02/NeoMet_Pool_015/step1/AxiomGT1.calls.txt \tMsgCount: 1
+07/07/2021 09:55:25	info,summary,GUI,ERROR_GUI,LOG	1	3	ERROR\tMainNode run failed with one or more errors. ErrCode: 1012\tMsgCount: 1
+07/07/2021 09:55:25	info,summary,LOG	1	3	
+07/07/2021 09:55:25	info,summary,LOG	1	3	3 error(s) and 0 warning(s).
+07/07/2021 09:55:25	info,summary,LOG	1	3	
+07/07/2021 09:55:25	LOG	1	3	#### MainNode::doRunAll(...) TOTAL TIME : 0.32 seconds.
+07/07/2021 09:55:25	LOG	1	3	#### PsMetricsNodeEngine::doRunAll(...) TOTAL TIME : 0.31 seconds.
+07/07/2021 09:55:25	info,LOG	1	3	
+07/07/2021 09:55:25	LOG,INFO,GUI	1	3	Runtime: 0 hours 0 minutes and 0 seconds.
+07/07/2021 09:55:25	info,LOG	1	3	
+07/07/2021 09:55:25	LOG,INFO,GUI	1	3	Max memory usage: 3 MB

@@ -1,0 +1,166 @@
+#%%field-000=date-time,string8
+#%%field-001=facility,string8
+#%%field-002=level,int8
+#%%field-003=mem usage (MB),string8
+#%%field-004=message,string8
+#
+date-time	facility	level	mem usage (MB)	message
+07/07/2021 09:55:40	GUI,INFO,LOG	1	2	logging to file 'ps-classification-1625615740.log'
+07/07/2021 09:55:40	INFO	1	2	Application: ps-classification
+07/07/2021 09:55:40	INFO	1	2	Version: 2.10.2 stash.amer.thermo.com/ma-alg/apt2-snppolisher.git/release/APT_2.10.2@5b62fc9457(75b176a197) 2018-08-25-00:28
+07/07/2021 09:55:40	INFO	1	2	CPP version: c++11 (201103L) 
+07/07/2021 09:55:40	INFO	1	2	Log file selector: "*:9"
+07/07/2021 09:55:40	INFO	1	2	Console selector: "OR(info,warning,error,help,INFO,WARNING,ERROR,HELP)"
+07/07/2021 09:55:40	runtime,PROGRESS	1	2	0.000000,0.000000,0.000000,starting
+07/07/2021 09:55:40	DEBUG	1	2	creating... ps-classification-node PsClassificationNode
+07/07/2021 09:55:40	DEBUG,LOG	1	2	original command line: ps-classification --species-type human --metrics-file /share/ScratchGeneral/nenbar/projects/CITE/genotyping/neomet_02/NeoMet_Pool_015/step1/SNPolisher/metrics.txt --output-dir /share/ScratchGeneral/nenbar/projects/CITE/genotyping/neomet_02/NeoMet_Pool_015/step1/SNPolisher --ps2snp-file /share/ScratchGeneral/nenbar/projects/CITE/genotyping/annotation/Axiom_UKB_WCSG.r5.ps2snp_map.ps
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-nodes'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-nodes-long'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-nodes-classes'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-data-flow'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-param'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-param-long'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-param-dev'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-param-long-dev'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-all'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-all-long'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@log-machine-name'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:enable'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:disable'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@serialize'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@serialize-pre'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@serialize-post'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@stop'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@stop-after'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:version'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:user-help'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dev-help'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@doxygen-help'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:log-file'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@log-select'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@console-select'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@socket-select'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:console-add-select'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:console-add-neg-select'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:arg-file'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:check-param'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@serialize-dir'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@short-serialize-names'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@resume-file'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@debug'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@break'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-classes'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-all-param-xml'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@dump-user-param-xml'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:@export-html-doc'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:use-sockets'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:socket-host'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode:socket-port'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:@dump-nodes'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:@dump-nodes-long'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:@dump-nodes-classes'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:@dump-data-flow'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:@dump-param'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:@dump-param-long'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:@dump-param-dev'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:@dump-param-long-dev'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:@dump-all'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:@dump-all-long'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:@log-machine-name'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:enable'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:disable'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:@serialize'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:@serialize-pre'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:@serialize-post'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:@stop'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:@stop-after'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:metrics-file'
+07/07/2021 09:55:41	info	4	3	MainNode-ps-classification-node:metrics-file: checking '/share/ScratchGeneral/nenbar/projects/CITE/genotyping/neomet_02/NeoMet_Pool_015/step1/SNPolisher/metrics.txt' file should exist.
+07/07/2021 09:55:41	ERROR	1	3	MainNode-ps-classification-node:metrics-file: file '/share/ScratchGeneral/nenbar/projects/CITE/genotyping/neomet_02/NeoMet_Pool_015/step1/SNPolisher/metrics.txt' does not exist!
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:species-type'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:report-file-ext'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:ps2snp-file'
+07/07/2021 09:55:41	info	4	3	MainNode-ps-classification-node:ps2snp-file: checking '/share/ScratchGeneral/nenbar/projects/CITE/genotyping/annotation/Axiom_UKB_WCSG.r5.ps2snp_map.ps' file should exist.
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:output-dir'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:output-recommended'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:recommended'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:cr-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:fld-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:het-so-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:het-so-otv-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:hom-ro-1-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:hom-ro-2-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:hom-ro-3-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:hom-ro'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:hom-het'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:num-minor-allele-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:@use-copynumber'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:hom-ro-hap-1-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:hom-ro-hap-2-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:hom-hap-X-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:hom-hap-Y-lower-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:hom-hap-Y-upper-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:CN0-hap-X-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:CN0-hap-Y-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:CN0-dip-X-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:CN0-dip-Y-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:priority-order'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:pid-file'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:use-supplemental'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:homfld-cut'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:n-minor-hom-cut'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:hetv-maf-cut'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:variance-class'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:bb-varx-cut'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:bb-vary-cut'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:ab-varx-cut'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:ab-vary-cut'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:aa-varx-cut'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:aa-vary-cut'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:bb-varx-z-cut'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:bb-vary-z-cut'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:ab-varx-z-cut'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:ab-vary-z-cut'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:aa-varx-z-cut'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:aa-vary-z-cut'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:aa-vary-z-cut-enabled'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:ab-vary-z-cut-enabled'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:bb-vary-z-cut-enabled'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:aa-varx-z-cut-enabled'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:ab-varx-z-cut-enabled'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:bb-varx-z-cut-enabled'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:use-ssp'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:hom-ro-hap-1-MTChr-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:hom-ro-hap-2-MTChr-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:hom-ro-hap-1-XChr-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:hom-ro-hap-2-XChr-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:homfld-YChr-cut'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:homfld-XChr-cut'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:fld-XChr-cut'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:aaf-XChr-cut'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:het-so-XChr-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:min-YChr-samples-cut'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:multi-metrics-file'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:use-multi-allele'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:sign-diff-hom-1-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:sign-diff-hom-2-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:min-mean-cp2-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:max-mean-cp2-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:@regress-model-cutoff'
+07/07/2021 09:55:41	DEBUG	7	3	NodeParam::doCheck(): 'MainNode-ps-classification-node:genotype-p-value-cutoff'
+07/07/2021 09:55:41	info	1	3	BaseNode::doCheckParamAll(): doCheckNodeParams rv=1026
+07/07/2021 09:55:41	info	1	3	BaseNode::doCheckParamAll(): doCheckParamChildren rv=1026
+07/07/2021 09:55:41	ERROR	1	3	MainNode::doCheckParam() - failed (rv=1026)
+07/07/2021 09:55:41	runtime,PROGRESS	1	3	0.000000,0.000000,0.000000,(0%) done. (rv=1026)
+07/07/2021 09:55:41	info,summary,LOG	1	3	
+07/07/2021 09:55:41	info,summary,LOG	1	3	Message Summary
+07/07/2021 09:55:41	info,summary,LOG	1	3	
+07/07/2021 09:55:41	info,summary,GUI,ERROR_GUI,LOG	1	3	ERROR\tMainNode-ps-classification-node:metrics-file: file '/share/ScratchGeneral/nenbar/projects/CITE/genotyping/neomet_02/NeoMet_Pool_015/step1/SNPolisher/metrics.txt' does not exist!\tMsgCount: 1
+07/07/2021 09:55:41	info,summary,GUI,ERROR_GUI,LOG	1	3	ERROR\tMainNode::doCheckParam() - failed (rv=1026)\tMsgCount: 1
+07/07/2021 09:55:41	info,summary,LOG	1	3	
+07/07/2021 09:55:41	info,summary,LOG	1	3	2 error(s) and 0 warning(s).
+07/07/2021 09:55:41	info,summary,LOG	1	3	
+07/07/2021 09:55:41	info,LOG	1	3	
+07/07/2021 09:55:41	LOG,INFO,GUI	1	3	Runtime: 0 hours 0 minutes and 1 seconds.
+07/07/2021 09:55:41	info,LOG	1	3	
+07/07/2021 09:55:41	LOG,INFO,GUI	1	3	Max memory usage: 3 MB
