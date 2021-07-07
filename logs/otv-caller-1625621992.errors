@@ -1,0 +1,10 @@
+#%%field-000=date-time,string8
+#%%field-001=facility,string8
+#%%field-002=level,int8
+#%%field-003=mem usage (MB),string8
+#%%field-004=message,string8
+#
+date-time	facility	level	mem usage (MB)	message
+07/07/2021 11:39:52	ERROR	1	3	Failed to open file /share/ScratchGeneral/nenbar/projects/CITE/genotyping/neomet_02/NeoMet_Pool_015/step1/SNPolisher/Recommended.ps 
+07/07/2021 11:39:52	ERROR	1	3	Can't open file /share/ScratchGeneral/nenbar/projects/CITE/genotyping/neomet_02/NeoMet_Pool_015/step1/SNPolisher/Recommended.ps 
+07/07/2021 11:39:52	ERROR	1	3	MainNode run failed with one or more errors. ErrCode: 1012
