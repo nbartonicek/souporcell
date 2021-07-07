@@ -19,7 +19,7 @@ mkdir -p $logDir
 projectname=$1
 run=$2
 runDir=$3
-annotation=$4
+genotype_array=$4
 samples=$5
 
 #this is the most common place for errors
@@ -27,7 +27,7 @@ bamDir=$runDir/$run/$run"/outs/count"
 annotationDir=$projectDir/"genotyping/annotation"
 sampleNames=`echo $samples | tr "," "_"`
 sampleArray=($(echo "$samples" | tr ',' '\n'))
-arrayDir=$projectDir"/raw_files/genotyping/$annotation/"
+arrayDir=$projectDir"/raw_files/genotyping/$genotype_array/"
 genotypeDir=$projectDir/"genotyping/$projectname/$run"
 outDir=$projectDir"/project_results/souporcell/$projectname/$run"
 step1Dir=$genotypeDir/step1
@@ -49,7 +49,9 @@ if [ ! -f "$annotationDir/common_variants_grch38.vcf" ]; then echo "downloading 
 fi
 
 #to-do: check that Axiom chip annotation is in the right directory
-
+if [ ! -f "$bamDir/filtered_feature_bc_matrix/barcodes.tsv.gz" ]; then echo "filtered_feature_bc_matrix/barcodes.tsv.gz not found in $bamDir directory, check runDir column and bamDir variable, or file permissions";
+	break;
+fi
 
 #to-do: check that Axiom raw data is in the right directory
 
@@ -72,9 +74,9 @@ mkdir -p $outDir
 
 ########### 1. genotyping 
 
-##perform genotyping only if annotation available
+##perform genotyping only if genotyping data is available
 
-if [[ $annotation != +(NA|NONE|na|none) ]]; then 
+if [[ $genotype_array != +(NA|NONE|na|none) ]]; then 
 
 	(echo cel_files; ls -1 $arrayDir/*.CEL) > $step1Dir/"cel_list1.txt"
 
@@ -92,10 +94,10 @@ if [[ $annotation != +(NA|NONE|na|none) ]]; then
 
 	############### run apt-genotype-axiom
 
-	if [[ $annotation == *"UKB"* ]]
+	if [[ $genotype_array == *"UKB"* ]]
 	then
 		genotypeLine="apt-genotype-axiom --log-file $step1Dir/"apt-genotype-axiom.log" --arg-file $annotationDir/"Axiom_UKB_WCSG.r5.apt-genotype-axiom.AxiomCN_GT1.apt2.xml" --analysis-files-path $annotationDir --out-dir $step1Dir --dual-channel-normalization true --cel-files $step1Dir/"cel_list2.txt" --summaries --write-models --batch-folder $step1Dir"
-	elif [[ $annotation == *"PMDA"* ]]
+	elif [[ $genotype_array == *"PMDA"* ]]
 	then 
 		genotypeLine="apt-genotype-axiom --log-file $step1Dir/"apt-genotype-axiom.log" --arg-file $annotationDir/"Axiom_PMDA.r7.apt-genotype-axiom.AxiomCN_GT1.apt2.xml" --analysis-files-path $annotationDir --out-dir $step1Dir --dual-channel-normalization true --cel-files $step1Dir/"cel_list2.txt" --summaries --write-models --batch-folder $step1Dir"
 	else
@@ -141,7 +143,7 @@ if [[ $annotation != +(NA|NONE|na|none) ]]; then
 	qsub -q short.q -b y -j y -N genotypeStep8$run -hold_jid genotypeStep7$run -wd $logDir -pe smp 5 -V $liftoverLine
 
 	hg38toB38Line="more $step2Dir"/"$sampleNames".hg38.vcf" | sed s/chr// | awk 'NR>3' > $finalVCF"
-	qsub -q short.q -b y -j y -N genotypeStep9$run -hold_jid genotypeStep8$run -wd $logDir -pe smp 1 -V $hg38toB38Line
+	qsub -q short.q -b y -j y -N demux$run -hold_jid genotypeStep8$run -wd $logDir -pe smp 1 -V $hg38toB38Line
 
 
 	#if this succeeded, there should be file $step2Dir"/"$projectname".b38.vcf". that will be used for imputation and further analysis
@@ -162,16 +164,16 @@ gunzip -c $bamDir/filtered_feature_bc_matrix/barcodes.tsv.gz >$outDir/barcodes.t
 #annotationDir
 #number of samples
 
-qsub -N souporcellStep1$run -q long.q -wd $logDir -pe smp 1 -P TumourProgression $scriptsPath/3.souporcell.sh $projectname $run $outDir $bamDir $annotationDir ${#sampleArray[@]}
+qsub -N demux$run -q long.q -wd $logDir -pe smp 1 -P TumourProgression $scriptsPath/3.souporcell.sh $projectname $run $outDir $bamDir $annotationDir ${#sampleArray[@]}
 
 ########### 3. annotate 
 
 #annotate the output with python script
 #modify the outfile so that it has real info
-if [[ $annotation != +(NA|NONE|na|none) ]]; then 
+if [[ $genotype_array != +(NA|NONE|na|none) ]]; then 
 
 	annotateLine="python $scriptsPath/4.annotate.py $outDir $finalVCF"
-	qsub -q short.q -b y -j y -N annotate2$run -hold_jid souporcellStep1$run -wd $logDir -pe smp 1 -V $annotateLine
+	qsub -q short.q -b y -j y -N annotate2$run -hold_jid demux$run -wd $logDir -pe smp 1 -V $annotateLine
 
 fi
   

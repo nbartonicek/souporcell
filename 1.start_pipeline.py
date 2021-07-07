@@ -12,7 +12,7 @@ for index,row in df.iterrows():
 	projectname=row['projectname']
 	run=row['run']
 	runDir=row['runDir']
-	annotation=row['annotation']
+	genotype_array=row['genotype_array']
 #find the number of samples despite the comma placement
 	columnNames=df.columns.astype(str)
 	unnamed=list(filter(lambda x:'Unnamed' in x,columnNames))
@@ -29,4 +29,4 @@ for index,row in df.iterrows():
 		else:
 			total = total+","+Si
 	print(total)
-	os.system("bash 2.genotype_souporcell_annotate.sh "+projectname+" "+run+" "+runDir+" "+annotation+" "+total)
+	os.system("bash 2.genotype_souporcell_annotate.sh "+projectname+" "+run+" "+runDir+" "+genotype_array+" "+total)
