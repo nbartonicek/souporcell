@@ -133,7 +133,7 @@ if [[ $genotype_array != +(NA|NONE|na|none) ]]; then
 	qsub -q short.q -b y -j y -N genotypeStep7$run -hold_jid genotypeStep6$run -wd $logDir -pe smp 1 -V $cleanVCFLine
 
 	#watch out this step needs a bit more memory
-	liftoverLine="java -jar picard.jar LiftoverVcf I=$step2Dir"/"$sampleNames".b37.clean.vcf" O=$step2Dir"/"$sampleNames".hg38.vcf" CHAIN=$annotationDir"/b37ToHg38.over.chain" REJECT=$annotationDir"/rejected_variants.vcf" R=/share/ClusterShare/biodata/contrib/nenbar/genomes/human/hg38/hg38.fa"
+	liftoverLine="java -jar ~/local/bin/picard.jar LiftoverVcf I=$step2Dir"/"$sampleNames".b37.clean.vcf" O=$step2Dir"/"$sampleNames".hg38.vcf" CHAIN=$annotationDir"/b37ToHg38.over.chain" REJECT=$annotationDir"/rejected_variants.vcf" R=/share/ClusterShare/biodata/contrib/nenbar/genomes/human/hg38/hg38.fa"
 	qsub -q short.q -b y -j y -N genotypeStep8$run -hold_jid genotypeStep7$run -wd $logDir -pe smp 5 -V $liftoverLine
 
 	hg38toB38Line="more $step2Dir"/"$sampleNames".hg38.vcf" | sed s/chr// | awk 'NR>3' > $finalVCF"
