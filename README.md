@@ -59,17 +59,23 @@ download https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%20Cell
 -place into your project directory under raw_data/genotype/"annotation" where "annotation" is the 4th column in your samplesheet
 
 
-## 6. Other tools 
+## 5. Other tools 
 
 -requires installation:
 
-python v.3.5 or above
+1. python v.3.5 or above
 
-vireoSNP `pip install vireoSNP`
+2. vireoSNP 
 
-picard v2.20 or above `wget https://github.com/broadinstitute/picard/releases/download/2.20.0/picard.jar`
+`pip install vireoSNP`
 
--following are available as modules on the Garvan cluster, no need to install:
+3. picard v2.20 or above 
+
+`wget https://github.com/broadinstitute/picard/releases/download/2.20.0/picard.jar`
+
+`cp picard.jar ~/local/bin`
+
+4. following are available as modules on the Garvan cluster, no need to install:
 
 gcc v.4.8.2
 
@@ -83,7 +89,7 @@ bedtools v2.22.0
 
 
 
-## 7. Samplesheet in csv format with information on: 
+## 6. Samplesheet in csv format with information on: 
 #### i project_name 
 -preferably something related to biology or person
 #### ii run
