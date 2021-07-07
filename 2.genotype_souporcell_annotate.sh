@@ -1,7 +1,6 @@
 #!/bin/bash
 
 module load centos6.10/gi/gcc/4.8.2
-module load centos6.10/gi/picard-tools/1.138
 module load centos6.10/gi/plink/prebuilt/1.07
 module load centos6.10/gi/plink/prebuilt/1.90beta_3g
 module load centos6.10/gi/novosort/precompiled/1.03.08
