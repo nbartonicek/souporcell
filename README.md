@@ -30,10 +30,6 @@ download from https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%2
 
 `cp apt-2.10.2.2-x86_64-intel-linux/bin/* ~/local/bin`
 
--install a python requirement vireoSNP (python 3.8 required):
-
-`pip install vireoSNP`
-
 -make sure it all worked
 
 `apt-genotype-axiom --help`
@@ -60,10 +56,13 @@ download https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%20Cell
 
 ## 5. vireoSNP library for python
 
+
+-install a python requirement vireoSNP (python 3.8 required):
+
 `pip install vireoSNP`
 
 
-## 5. Tools for analysis of Axiom data 
+## 6. Tools for analysis of Axiom data 
 -available as modules on the Garvan cluster, no need to install:
 
 gcc >v.4.8.2
@@ -78,7 +77,7 @@ vcftools >v0.1.16
 
 bedtools >v2.22.0
 
-## 6. Samplesheet in csv format with information on: 
+## 7. Samplesheet in csv format with information on: 
 #### i project_name 
 -preferably something related to biology or person
 #### ii run
