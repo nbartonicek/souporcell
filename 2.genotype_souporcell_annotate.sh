@@ -48,11 +48,6 @@ if [ ! -f "$annotationDir/common_variants_grch38.vcf" ]; then echo "downloading 
 	wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=13aebUpEKrtjliyT9rYzRijtkNJVUk5F_' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=13aebUpEKrtjliyT9rYzRijtkNJVUk5F_" -O $annotationDir/common_variants_grch38.vcf && rm -rf /tmp/cookies.txt
 fi
 
-#to-do: check that Axiom chip annotation is in the right directory
-if [ ! -f "$bamDir/filtered_feature_bc_matrix/barcodes.tsv.gz" ]; then echo "filtered_feature_bc_matrix/barcodes.tsv.gz not found in $bamDir directory, check runDir column and bamDir variable, or file permissions";
-	break;
-fi
-
 #to-do: check that Axiom raw data is in the right directory
 
 
