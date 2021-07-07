@@ -28,6 +28,8 @@ download from https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%2
 
 `unzip APT_2.10.2.2_Linux_64_bitx86_binaries.zip`
 
+`chmod 775 apt-2.10.2.2-x86_64-intel-linux/bin/*`
+
 `cp apt-2.10.2.2-x86_64-intel-linux/bin/* ~/local/bin`
 
 -make sure it all worked
