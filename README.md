@@ -73,6 +73,8 @@ download https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%20Cell
 
 `wget https://github.com/broadinstitute/picard/releases/download/2.20.0/picard.jar`
 
+`chmod 775 picard.jar`
+
 `cp picard.jar ~/local/bin`
 
 4. following are available as modules on the Garvan cluster, no need to install:
