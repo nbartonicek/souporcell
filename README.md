@@ -46,6 +46,8 @@ Currently two available:
 
 download https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%20Cell%20Projects/demultiplexing/annotation.tar.gz
 
+`curl -X POST https://content.dropboxapi.com/2/files/download --header "Authorization: Bearer $dropbox_user_key" --header "Dropbox-API-Arg: {\"path\": \"/SwarbrickLab Team Folder/Single Cell Projects/demultiplexing/annotation.tar.gz\"}" -o "./annotation.tar.gz"
+
 `cd genotyping`
 
 `tar -xvf annotation.tar.gz`
