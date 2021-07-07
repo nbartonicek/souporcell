@@ -100,8 +100,8 @@ bedtools v2.22.0
 
 #### v Sample IDs (as many as you have per run, below is an example for 3)
 
-| projectname | run | runDir | annotation | S1 | S2 | S3 |
-| ----------- | --- | ------ | ---------- | -- | -- | -- |
+| projectname | run | runDir | genotype_array | S1 | S2 | S3 |
+| ----------- | --- | ------ | -------------- | -- | -- | -- |
 | Eva_PCa_01  | PCa1 | /directflow/GWCCGPipeline/projects/bioinformatics/R_200416_EVAAPO_INT_10X/200626_A00152_0271_BHFHVNDSXY/GE | HAR8323_UKB_2020_RESULTS | 20384 | 19616 | 20216 |
 
 Please keep the headers as in the table above, with sample columns as S1..Sn where n is the number of samples
