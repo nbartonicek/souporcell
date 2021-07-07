@@ -54,6 +54,11 @@ download https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%20Cell
 
 -place into your project directory under raw_data/genotype/"annotation" where "annotation" is the 4th column in your samplesheet
 
+## 5. vireoSNP library for python
+
+`pip install vireoSNP`
+
+
 ## 5. Tools for analysis of Axiom data 
 -available as modules on the Garvan cluster, no need to install:
 
