@@ -30,7 +30,11 @@ download from https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%2
 
 `cp apt-2.10.2.2-x86_64-intel-linux/bin/* ~/local/bin`
 
--test if it worked:
+-install a python requirement vireoSNP (python 3.8 required):
+
+`pip install vireoSNP`
+
+-make sure it all worked
 
 `apt-genotype-axiom --help`
 
