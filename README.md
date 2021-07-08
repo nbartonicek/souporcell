@@ -56,7 +56,7 @@ download https://www.dropbox.com/home/SwarbrickLab%20Team%20Folder/Single%20Cell
 
 -collection of CEL files and annotations, requires CEL files with sample names in them, table_rpt.txt
 
--place into your project directory under raw_data/genotype/"annotation" where "annotation" is the 4th column in your samplesheet
+-place into your project directory under raw_files/genotyping/"annotation" where "annotation" is the 4th column in your samplesheet
 
 
 ## 5. Other tools 
