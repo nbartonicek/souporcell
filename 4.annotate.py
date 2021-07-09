@@ -44,7 +44,7 @@ idx0, idx1, GPb_diff = vireoSNP.base.optimal_match(GPb0_tensor_use, GPb1_tensor_
                                                    axis=1, return_delta=True)
 
 #modify naming of the samples
-ids_trimmed = [re.sub(r'.CEL', '', id) for id in GPb1_donor_ids]
+ids_trimmed = [re.sub(r'.CEL', '', id) for id in GPb1_donor_ids[idx1]]
 ids_trimmed = [re.sub(r'_Blood.*', '', id) for id in ids_trimmed]
 ids_trimmed = [re.sub(r'_Tumou.*', '', id) for id in ids_trimmed]
 ids_trimmed = [re.sub(r'_\d$', '', id) for id in ids_trimmed]
