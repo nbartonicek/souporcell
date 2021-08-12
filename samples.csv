@@ -1,2 +1,6 @@
-projectname,run,runDir,genotype_array,S1,S2,S3,S4,S5,S6,
-neomet_02,NeoMet_Pool_015,/share/ScratchGeneral/niaden/NeoMet02,HAR9464_UKB_2021_RESULTS,4728,4760,4763,4720,4730,
+projectname,run,runDir,genotype_array,S1,S2,S3,S4
+TNBC,TNBC_001,/share/ScratchGeneral/evaapo/projects/TNBC/,HAR7913_PMDA_1600_RESULTS,4245,3962,3944,4378
+TNBC,TNBC_002,/share/ScratchGeneral/evaapo/projects/TNBC/,HAR7913_PMDA_1600_RESULTS,4269,4043,4559,NA
+TNBC,TNBC_003,/share/ScratchGeneral/evaapo/projects/TNBC/,HAR8323_UKB_2020_RESULTS,4744,4419,3960,NA
+TNBC,TNBC_004,/share/ScratchGeneral/evaapo/projects/TNBC/,HAR8323_UKB_2020_RESULTS,3934,4295,4304,NA
+TNBC,TNBC_005,/share/ScratchGeneral/evaapo/projects/TNBC/,HAR8323_UKB_2020_RESULTS,4748,4735,NA,NA

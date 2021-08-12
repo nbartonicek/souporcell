@@ -6,7 +6,7 @@ import os
 #location of the axiom genotyping array as well as sample IDs 
 #and starts souporcell analysis
 
-df = pd.read_csv("samples.csv") 
+df = pd.read_csv("samples.csv", dtype=str) 
 
 for index,row in df.iterrows():
 	projectname=row['projectname']
@@ -23,10 +23,10 @@ for index,row in df.iterrows():
 		columnName='S'+str(nCol)
 		#check for empty
 		if not pd.isna(row[columnName]):
-			Si=str(int(row[columnName]))
-		if nCol == 1:
-			total = Si
-		else:
-			total = total+","+Si
+			Si=str(row[columnName])
+			if nCol == 1:
+				total = Si
+			else:
+				total = total+","+Si
 	print(total)
 	os.system("bash 2.genotype_souporcell_annotate.sh "+projectname+" "+run+" "+runDir+" "+genotype_array+" "+total)

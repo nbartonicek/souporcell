@@ -44,11 +44,16 @@ idx0, idx1, GPb_diff = vireoSNP.base.optimal_match(GPb0_tensor_use, GPb1_tensor_
                                                    axis=1, return_delta=True)
 
 #modify naming of the samples
+
+print(GPb0_donor_ids)
+print(GPb1_donor_ids[idx1])
+
+
 ids_trimmed = [re.sub(r'.CEL', '', id) for id in GPb1_donor_ids[idx1]]
 ids_trimmed = [re.sub(r'_Blood.*', '', id) for id in ids_trimmed]
 ids_trimmed = [re.sub(r'_Tumou.*', '', id) for id in ids_trimmed]
 ids_trimmed = [re.sub(r'_\d$', '', id) for id in ids_trimmed]
-ids_trimmed = [re.sub(r'.*_', '', id) for id in ids_trimmed]
+ids_trimmed = [re.sub(r'.*_AP', 'AP', id) for id in ids_trimmed]
 dictionary = dict(zip(GPb0_donor_ids, ids_trimmed))
 
 #load in the cluster file
